@@ -1,4 +1,4 @@
-package controller;
+package site.cyberpage.cyberpagekorea.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -12,11 +12,18 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class HomeController {
 
+    @GetMapping("")
+    public String getHomeBySlash(){
+        System.out.println("슬래시로 접근");
+        return "home";
+    }
+
     @GetMapping("home")
-    public String getHome() {
+    public ModelAndView getHome(ModelAndView mav) {
+        System.out.println("gethome으로 접근중");
 
         System.out.println("홈화면 접근(겟)");
-        return "home";
+        return mav;
     }
 
 

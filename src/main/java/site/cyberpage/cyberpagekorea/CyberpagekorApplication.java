@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CyberpagekorApplication {
 
 	public static void main(String[] args) {
+		System.out.println("어플리케이션 접근");
 		SpringApplication.run(CyberpagekorApplication.class, args);
 	}
 
