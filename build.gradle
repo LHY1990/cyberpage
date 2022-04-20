@@ -28,6 +28,13 @@ dependencies {
 	//devtool은 코드변경시마다 자동으로 빌드하도록 한다.
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// 몽고디비 연동 의존성주입
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.5.12'
+	// https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+//	implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.11.2'
+
 }
 
 tasks.named('test') {
